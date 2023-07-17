@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    background-color: hsl(204, 43%, 93%);
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+main.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        'cr-wt cr-wt'
+        'cr-dk cr-lt'
+        ;
+    width: 650px;
+}
+h1{
+    color: hsl(179, 62%, 43%);
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+h2{
+    color: hsl(71, 73%, 54%);
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+    /* background-color: red; */
+}
+h2.title{
+    font-size: 1.3rem;
+}
+.h2white{
+    color: #fff;
+    padding-bottom: 0;
+    font-size: 1.3rem;
+}
+.h2white_2{
+    padding-bottom: 2rem;
+    color: #fff;
+}
+h3{
+    color: hsl(218, 22%, 67%);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    line-height: 1.2rem;
+}
+.h3white{
+    color: #fff;
+    padding-bottom: 0.5rem;
+}
+.h3white_sub{
+    color: #fff;
+    padding-bottom: 0.5rem;
+    opacity: 0.8;
+    line-height: 1.5rem;
+}
+h4{
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+h5{
+    color: #fff;
+    opacity: 0.5;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.cr-wt{
+    grid-area: cr-wt;
+    background-color: #fff;
+    border-top-right-radius: 0.7rem;
+    border-top-left-radius: 0.7rem;
+    padding-left: 2.8rem;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+    padding-right: 4rem;
+}
+.cr-dk{
+    grid-area: cr-dk;
+    background-color: hsl(179, 62%, 43%);
+    display: grid;
+    justify-content: center;
+    border-bottom-left-radius: 0.7rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.cr-lt{
+    grid-area: cr-lt;
+    background-color: hsl(179, 62%, 43%, 0.8);
+    border-bottom-right-radius: 0.7rem;
+    padding-left: 2.8rem;
+    padding-top: 3rem;
+    padding-right: 3.2rem;
+    padding-bottom: 2.5rem;
+}
+.item{
+    display: flex;
+    align-items: center;
+    /* background-color: steelblue; */
+}
+button{
+    text-align: center;
+    border: 0.3rem solid hsl(71, 73%, 54%);
+    background-color: hsl(71, 73%, 54%);
+    border-radius: 0.4rem;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    box-shadow: 0px 10px 10px hsl(179, 61%, 36%);
+}
+
+@media(max-width:800px){
+    body{
+        display: grid;
+        width: 375px;
+        height: fit-content;
+        margin: 100px auto;
+        padding: 0;
+    }
+    main.card{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'cr-wt' 'cr-dk' 'cr-lt';
+        width: 350px;
+    }
+    .cr-wt{
+        border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+        padding: 2rem;
+    }
+    .cr-dk{
+        border-bottom-left-radius: 0;
+        padding: 0;
+        justify-content: left;
+        padding: 2rem;
+    }
+    .cr-lt{
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        padding: 2rem;
+    }
+    button{
+        border: 1rem solid hsl(71, 73%, 54%);
+        padding-bottom: 0;
+        width: 285px;
+        height: 50px;
+    }
+    h1{
+        font-size: 1.4rem;
+        padding-bottom: 1.5rem;
+    }
+    h2.title{
+        font-size: 17px;
+        padding-bottom: 1.5rem;
+    }
+    h3{
+        font-size: 15px;
+        padding-bottom: 1rem;
+    }
+    .h2white{
+        padding-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+    .h3white{
+        padding-bottom: 1.7rem;
+    }
+    .item{
+        padding-bottom: 0.5rem;
+    }
+}
